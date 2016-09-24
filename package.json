@@ -1,0 +1,23 @@
+{
+  "name": "instagram-gallery-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtart/instagram-gallery-react-component"
+  },
+  "author": "Jordan Tart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jtart/instagram-gallery-react-component/issues"
+  },
+  "homepage": "https://github.com/jtart/instagram-gallery-react-component#readme",
+  "dependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "devDependencies": {
+  }
+}
