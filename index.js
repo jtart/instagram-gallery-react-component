@@ -1,1 +1,0 @@
-document.body.innerHTML = "Test page for Instagram react gallery component"
