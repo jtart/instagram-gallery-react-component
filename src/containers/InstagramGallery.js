@@ -1,10 +1,18 @@
 import React from 'react'
 
+import Gallery from '../components/Gallery'
+
 const InstagramGallery = React.createClass({
+  propTypes: {
+    data: React.PropTypes.object
+  },
+
   render () {
+    const data = this.props.data || {}
+
     return (
       <div>
-        'Hello world'
+      	<Gallery data={data.items} />
       </div>
     )
   }

@@ -2,14 +2,14 @@ import React from 'react'
 
 const GalleryItem = React.createClass({
   propTypes: {
-    url: React.PropTypes.string.isRequired,
+    link: React.PropTypes.string.isRequired,
     image: React.PropTypes.string.isRequired,
   },
 
   render () {
     return (
       <div>
-        <a href={this.props.url}>
+        <a href={this.props.link}>
           <img src={this.props.image}/>
         </a>
       </div>
