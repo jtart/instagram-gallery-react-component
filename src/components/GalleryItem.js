@@ -2,17 +2,16 @@ import React from 'react'
 
 const GalleryItem = React.createClass({
   propTypes: {
-    link: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string.isRequired,
+    link: React.PropTypes.string.isRequired
   },
 
   render () {
     return (
-      <div>
-        <a href={this.props.link}>
-          <img src={this.props.image}/>
-        </a>
-      </div>
+      <li className='gallery_item'>
+          <a className='gallery_item--link' href={this.props.link}>
+            <img className='gallery_item--img' src={this.props.images.low_resolution.url}/>
+          </a>
+      </li>
     )
   }
 })
