@@ -29,7 +29,7 @@ gulp.task('static', (done) => {
 gulp.task('sass', function () {
     return gulp.src('styles/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        // .pipe(nano())
+        .pipe(nano())
         .pipe(gulp.dest('styles/'));
 });
 
