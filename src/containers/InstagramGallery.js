@@ -11,7 +11,7 @@ const InstagramGallery = React.createClass({
     const data = this.props.data || {}
 
     return (
-      <div>
+      <div id='gallery'>
       	<Gallery data={data.items} />
       </div>
     )
