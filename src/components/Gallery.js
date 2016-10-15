@@ -15,36 +15,24 @@ const Gallery = React.createClass({
   },
 
   componentDidMount() {
-    fetch('https://api.instagram.com/v1/users/self/media/recent?access_token=30447931.dfc9281.be32eb3012564bc5b1ff7ab8b5df2a94', {
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:8080'
-      },
-      mode: 'no-cors'
+    fetch('../../data/instagram_data.json')
+      .then(resp => resp.json())
+      .then(this.addDataToGalleryItems)
+      .then(items => this.setState({ items }))
+      .catch(e => console.log("SOMETHING WENT WRONG. PANIC."))
+  },
+
+  addDataToGalleryItems (data) {
+    return data.data.map(props => {
+      return <GalleryItem key={props.id} {...props} />
     })
-      .then(this.addToJson)
-      .then(this.addDataToItems)
-      .then(items => this.setState({items}))
-  },
-
-  addDataToItems (data) {
-    return data;
-    // return data.results.map(props => {
-      // return <GalleryItem key={props.name} {...props} />
-    // })
-  },
-
-  addToJson(data) {
-    console.log(data)
-    return data => response.json()
   },
 
   render() {
     return (
-      <div >
-        <h2>Instagram Gallery</h2>
-        <p>'start'</p>
-        <p>'end'</p>
-      </div>
+      <ul className='gallery--list'>
+        {this.state.items}
+      </ul>
     )
   }
 })
